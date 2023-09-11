@@ -14,8 +14,8 @@ const response =  (req,res) =>{
         "current_day": dayNames[day],
         "utc_time": date,
         "track": track,
-        "github_file_url": "https://github.com/username/repo/blob/main/file_name.ext",
-        "github_repo_url": "https://github.com/username/repo",
+        "github_file_url": "https://github.com/Aivetu/stage1/blob/main/server.js",
+        "github_repo_url": "https://github.com/Aivetu/stage1",
         "status_code": 200 
     }
     return res.json(resp);
