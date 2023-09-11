@@ -5,14 +5,16 @@ const response =  (req,res) =>{
     if(!name || !track){ return res.send("Enter stagename and/or track") } 
 
     const date = new Date();
+    const dateString = date.toISOString().slice(0,22).concat('Z');
     const day = date.getDay();
     const dayNames = ["Sunday", "Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
+    
     const resp ={
         
         "slack_name": name,
         "current_day": dayNames[day],
-        "utc_time": date,
+        "utc_time": dateString,
         "track": track,
         "github_file_url": "https://github.com/Aivetu/stage1/blob/main/server.js",
         "github_repo_url": "https://github.com/Aivetu/stage1",
