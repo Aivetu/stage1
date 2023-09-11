@@ -5,7 +5,7 @@ const response =  (req,res) =>{
     if(!name || !track){ return res.send("Enter stagename and/or track") } 
 
     const date = new Date();
-    const dateString = date.toISOString().slice(0,22).concat('Z');
+    const dateString = date.toISOString().slice(0,19).concat('Z');
     const day = date.getDay();
     const dayNames = ["Sunday", "Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
